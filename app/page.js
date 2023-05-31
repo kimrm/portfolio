@@ -7,7 +7,17 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
-        <h1 className={styles.heading_1}>Hi! I&apos;m Kim</h1>
+        <div className={styles.hero_heading}>
+          <Image
+            src="/gh_profile.png"
+            alt="Kim Rune Møller"
+            width={200}
+            height={200}
+            className={styles.profile_image}
+          />
+          <h1 className={styles.heading_1}>Hi! I&apos;m Kim</h1>
+        </div>
+
         <div className={styles.description}>
           <p>
             A passionate developer specializing in PHP, JavaScript, HTML, and
