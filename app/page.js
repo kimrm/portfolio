@@ -33,10 +33,11 @@ export default function Home() {
         <div className={styles.projects}>
           <div className={styles.project}>
             <Image
-              src="/next.svg"
+              src="/rainy_days.png"
               alt="Next.js logo"
               width={200}
               height={200}
+              className={styles.project_image}
             />
             <h3 className={styles.heading_3}>Rainy Days</h3>
             <div className={styles.description}>
@@ -49,10 +50,11 @@ export default function Home() {
           </div>
           <div className={styles.project}>
             <Image
-              src="/next.svg"
+              src="/cosmu_site.png"
               alt="Next.js logo"
               width={200}
               height={200}
+              className={styles.project_image}
             />
             <h3 className={styles.heading_3}>Community Science Museum</h3>
             <div className={styles.description}>
@@ -65,10 +67,11 @@ export default function Home() {
           </div>
           <div className={styles.project}>
             <Image
-              src="/next.svg"
+              src="/foodblog.png"
               alt="Next.js logo"
               width={200}
               height={200}
+              className={styles.project_image}
             />
             <h3 className={styles.heading_3}>Møllers Kitchen Food blog</h3>
             <div className={styles.description}>
