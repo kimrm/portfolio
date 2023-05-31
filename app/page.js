@@ -1,11 +1,41 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const [themeImage, setThemeImage] = useState("/icons8-light-50.png");
+
+  function switchTheme() {
+    const property = getComputedStyle(
+      document.documentElement
+    ).getPropertyValue("color-scheme");
+
+    switch (property) {
+      case "dark":
+        document.documentElement.style.setProperty("color-scheme", "light");
+        setThemeImage("/icons8-dark-theme-50.png");
+        break;
+      case "light":
+        document.documentElement.style.setProperty("color-scheme", "dark");
+        setThemeImage("/icons8-light-50.png");
+        break;
+    }
+  }
+
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
+        <button onClick={switchTheme} className={styles.theme_button}>
+          <Image
+            src={themeImage}
+            alt="Light/Dark theme"
+            width={24}
+            height={24}
+          />
+        </button>
         <div className={styles.hero_heading}>
           <Image
             src="/gh_profile.png"
@@ -41,9 +71,8 @@ export default function Home() {
             <h3 className={styles.heading_3}>Rainy Days</h3>
             <div className={styles.description}>
               <p>
-                Next.js is a React framework that allows you to build static and
-                server-side rendered applications. It&apos;s a great framework
-                for building websites and web applications.
+                This is a project I made for a frontend developer course.
+                It&apos;s a fictional webshop for rainwear.
               </p>
             </div>
             <Link
@@ -64,9 +93,8 @@ export default function Home() {
             <h3 className={styles.heading_3}>Community Science Museum</h3>
             <div className={styles.description}>
               <p>
-                Next.js is a React framework that allows you to build static and
-                server-side rendered applications. It&apos;s a great framework
-                for building websites and web applications.
+                This is a semester project for a frontend developer course.
+                It&apos;s a fictional website for a science museum.
               </p>
             </div>
             <Link
@@ -87,9 +115,8 @@ export default function Home() {
             <h3 className={styles.heading_3}>Møllers Kitchen Food blog</h3>
             <div className={styles.description}>
               <p>
-                Next.js is a React framework that allows you to build static and
-                server-side rendered applications. It&apos;s a great framework
-                for building websites and web applications.
+                This is a project exam for a frontend developer course.
+                It&apos;s a food blog.
               </p>
             </div>
             <Link
@@ -103,7 +130,7 @@ export default function Home() {
       </section>
       <section>
         <div className={styles.social_links}>
-          <Link href="https://linkedin.com">
+          <Link href="https://www.linkedin.com/in/kim-rune-m%C3%B8ller-32523394">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 64 64"
