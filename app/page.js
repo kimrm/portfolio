@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -47,6 +46,12 @@ export default function Home() {
                 for building websites and web applications.
               </p>
             </div>
+            <Link
+              href="https://splendid-custard-e9a90d.netlify.app/"
+              target="_blank"
+            >
+              Visit site
+            </Link>
           </div>
           <div className={styles.project}>
             <Image
@@ -64,6 +69,12 @@ export default function Home() {
                 for building websites and web applications.
               </p>
             </div>
+            <Link
+              href="https://joyful-kheer-f14cfb.netlify.app/"
+              target="_blank"
+            >
+              Visit site
+            </Link>
           </div>
           <div className={styles.project}>
             <Image
@@ -81,6 +92,12 @@ export default function Home() {
                 for building websites and web applications.
               </p>
             </div>
+            <Link
+              href="https://astounding-jalebi-1c1cf5.netlify.app/"
+              target="_blank"
+            >
+              Visit site
+            </Link>
           </div>
         </div>
       </section>

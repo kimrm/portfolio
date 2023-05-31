@@ -98,10 +98,11 @@
 }
 
 .heading_2 {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 600;
+  letter-spacing: 2px;
   margin-block: 1rem;
-  color: rgba(var(--card-border-rgb), 0.3);
+  color: rgba(var(--card-border-rgb), 0.5);
 }
 
 .heading_3 {
@@ -120,7 +121,7 @@
 }
 
 .icons_copyright {
-  color: rgba(var(--card-border-rgb), 1);
+  color: rgba(var(--card-border-rgb), 0.5);
 }
 
 .icons_copyright a {
