@@ -105,7 +105,7 @@ export default function Home() {
                 </Link>
                 &nbsp;|&nbsp;
                 <Link
-                  href="https://joyful-kheer-f14cfb.netlify.app/"
+                  href="https://github.com/kimrm/rainy-days-ca"
                   target="_blank"
                 >
                   Github
@@ -137,10 +137,7 @@ export default function Home() {
                   Visit site
                 </Link>
                 &nbsp;|&nbsp;
-                <Link
-                  href="https://joyful-kheer-f14cfb.netlify.app/"
-                  target="_blank"
-                >
+                <Link href="https://github.com/kimrm/cosmu" target="_blank">
                   Github
                 </Link>
               </div>
@@ -171,7 +168,7 @@ export default function Home() {
                 </Link>
                 &nbsp;|&nbsp;
                 <Link
-                  href="https://joyful-kheer-f14cfb.netlify.app/"
+                  href="https://github.com/Noroff-FEU-Assignments/project-exam-1-kimrm"
                   target="_blank"
                 >
                   Github
