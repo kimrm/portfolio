@@ -7,21 +7,24 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const [themeImage, setThemeImage] = useState("/icons8-light-50.png");
-  const [theme, setTheme] = useState();
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("colorScheme");
-    setTheme(savedTheme);
+
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
 
     document.documentElement.style.setProperty("color-scheme", theme);
     switch (theme) {
       case "dark":
-        document.documentElement.style.setProperty("color-scheme", "light");
-        setThemeImage("/icons8-dark-theme-50.png");
-        break;
-      case "light":
         document.documentElement.style.setProperty("color-scheme", "dark");
         setThemeImage("/icons8-light-50.png");
+        break;
+      case "light":
+        document.documentElement.style.setProperty("color-scheme", "light");
+        setThemeImage("/icons8-dark-theme-50.png");
         break;
     }
   }, [theme]);
