@@ -2,18 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
   const [themeImage, setThemeImage] = useState("/icons8-light-50.png");
+  const [theme, setTheme] = useState();
 
-  function switchTheme() {
-    const property = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("color-scheme");
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("colorScheme");
+    setTheme(savedTheme);
 
-    switch (property) {
+    document.documentElement.style.setProperty("color-scheme", theme);
+    switch (theme) {
       case "dark":
         document.documentElement.style.setProperty("color-scheme", "light");
         setThemeImage("/icons8-dark-theme-50.png");
@@ -23,6 +24,22 @@ export default function Home() {
         setThemeImage("/icons8-light-50.png");
         break;
     }
+  }, [theme]);
+
+  function switchTheme() {
+    switch (theme) {
+      case "dark":
+        saveTheme("light");
+        break;
+      case "light":
+        saveTheme("dark");
+        break;
+    }
+  }
+
+  function saveTheme(colorScheme) {
+    localStorage.setItem("colorScheme", colorScheme);
+    setTheme(colorScheme);
   }
 
   return (
