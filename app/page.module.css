@@ -129,6 +129,12 @@
   margin-block: 1rem;
 }
 
+.social_link {
+  background-color: var(--icon-background);
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+
 .icons_copyright {
   color: rgba(var(--card-border-rgb), 0.5);
 }

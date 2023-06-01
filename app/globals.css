@@ -1,5 +1,6 @@
 :root {
   color-scheme: dark;
+  --icon-background: #858585;
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -44,8 +45,15 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --icon-background: #858585;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
+    --icon-background: #858585;
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
