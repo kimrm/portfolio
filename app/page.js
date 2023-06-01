@@ -176,6 +176,36 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className={styles.project}>
+            <Image
+              src="/movielist.png"
+              alt="Next.js logo"
+              width={200}
+              height={200}
+              className={styles.project_image}
+            />
+            <div className={styles.project_content}>
+              <h3 className={styles.heading_3}>Movie List</h3>
+              <div className={styles.description}>
+                <p>This is a school project for a frontend developer course.</p>
+              </div>
+              <div>
+                <Link
+                  href="https://superb-hummingbird-948cfe.netlify.app/"
+                  target="_blank"
+                >
+                  Visit site
+                </Link>
+                &nbsp;|&nbsp;
+                <Link
+                  href="https://github.com/kimrm/movienight"
+                  target="_blank"
+                >
+                  Github
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section>
@@ -209,6 +239,13 @@ export default function Home() {
             Icons8
           </a>
         </div>
+      </section>
+      <section className={styles.privacy_section}>
+        <p>
+          This site uses cookies. Read my{" "}
+          <Link href="/privacy">privacy disclosure</Link> for further
+          information
+        </p>
       </section>
     </main>
   );

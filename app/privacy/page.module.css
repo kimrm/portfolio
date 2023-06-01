@@ -163,33 +163,6 @@
   cursor: pointer;
 }
 
-.privacy_section {
-  color: #424242;
-}
-
-.privacy_article h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-block: 1rem;
-}
-
-.privacy_article h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-block: 1rem;
-}
-
-.privacy_article > *:not(:first-child) {
-  margin-block-start: 1em;
-  max-width: 90ch;
-}
-
-.privacy_article ul,
-.privacy_article ol {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
-
 @media screen and (max-width: 768px) {
   .hero_heading {
     flex-direction: column;
