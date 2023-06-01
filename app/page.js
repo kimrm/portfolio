@@ -68,19 +68,30 @@ export default function Home() {
               height={200}
               className={styles.project_image}
             />
-            <h3 className={styles.heading_3}>Rainy Days</h3>
-            <div className={styles.description}>
-              <p>
-                This is a project I made for a frontend developer course.
-                It&apos;s a fictional webshop for rainwear.
-              </p>
+            <div className={styles.project_content}>
+              <h3 className={styles.heading_3}>Rainy Days</h3>
+              <div className={styles.description}>
+                <p>
+                  This is a project I made for a frontend developer course.
+                  It&apos;s a fictional webshop for rainwear.
+                </p>
+              </div>
+              <div>
+                <Link
+                  href="https://splendid-custard-e9a90d.netlify.app/"
+                  target="_blank"
+                >
+                  Visit site
+                </Link>
+                &nbsp;|&nbsp;
+                <Link
+                  href="https://joyful-kheer-f14cfb.netlify.app/"
+                  target="_blank"
+                >
+                  Github
+                </Link>
+              </div>
             </div>
-            <Link
-              href="https://splendid-custard-e9a90d.netlify.app/"
-              target="_blank"
-            >
-              Visit site
-            </Link>
           </div>
           <div className={styles.project}>
             <Image
@@ -90,19 +101,30 @@ export default function Home() {
               height={200}
               className={styles.project_image}
             />
-            <h3 className={styles.heading_3}>Community Science Museum</h3>
-            <div className={styles.description}>
-              <p>
-                This is a semester project for a frontend developer course.
-                It&apos;s a fictional website for a science museum.
-              </p>
+            <div className={styles.project_content}>
+              <h3 className={styles.heading_3}>Community Science Museum</h3>
+              <div className={styles.description}>
+                <p>
+                  This is a semester project for a frontend developer course.
+                  It&apos;s a fictional website for a science museum.
+                </p>
+              </div>
+              <div>
+                <Link
+                  href="https://joyful-kheer-f14cfb.netlify.app/"
+                  target="_blank"
+                >
+                  Visit site
+                </Link>
+                &nbsp;|&nbsp;
+                <Link
+                  href="https://joyful-kheer-f14cfb.netlify.app/"
+                  target="_blank"
+                >
+                  Github
+                </Link>
+              </div>
             </div>
-            <Link
-              href="https://joyful-kheer-f14cfb.netlify.app/"
-              target="_blank"
-            >
-              Visit site
-            </Link>
           </div>
           <div className={styles.project}>
             <Image
@@ -112,19 +134,30 @@ export default function Home() {
               height={200}
               className={styles.project_image}
             />
-            <h3 className={styles.heading_3}>Møllers Kitchen Food blog</h3>
-            <div className={styles.description}>
-              <p>
-                This is a project exam for a frontend developer course.
-                It&apos;s a food blog.
-              </p>
+            <div className={styles.project_content}>
+              <h3 className={styles.heading_3}>Møllers Kitchen Food blog</h3>
+              <div className={styles.description}>
+                <p>
+                  This is a project exam for a frontend developer course.
+                  It&apos;s a food blog.
+                </p>
+              </div>
+              <div>
+                <Link
+                  href="https://astounding-jalebi-1c1cf5.netlify.app/"
+                  target="_blank"
+                >
+                  Visit site
+                </Link>
+                &nbsp;|&nbsp;
+                <Link
+                  href="https://joyful-kheer-f14cfb.netlify.app/"
+                  target="_blank"
+                >
+                  Github
+                </Link>
+              </div>
             </div>
-            <Link
-              href="https://astounding-jalebi-1c1cf5.netlify.app/"
-              target="_blank"
-            >
-              Visit site
-            </Link>
           </div>
         </div>
       </section>

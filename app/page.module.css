@@ -34,7 +34,8 @@
 .project {
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 5px 10px 1px rgba(var(--card-border-rgb), 0.3);
+  box-shadow: 0 5px 30px 1px rgba(var(--card-border-rgb), 0.3);
+  height: 100%;
 }
 
 .project:hover {
@@ -42,6 +43,12 @@
   transform: scale(1.01);
   transform: rotate(1deg);
   transition: all 0.2s ease-in-out;
+}
+
+.project_content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 200px;
 }
 
 .project_image {
@@ -104,14 +111,14 @@
   font-weight: 600;
   letter-spacing: 2px;
   margin-block: 1rem;
-  color: rgba(var(--card-border-rgb), 0.5);
+  color: #424242;
 }
 
 .heading_3 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-block: 1rem;
-  color: rgba(var(--card-border-rgb), 1);
+  color: #424242;
 }
 
 .social_links {
