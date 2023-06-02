@@ -167,10 +167,7 @@ export default function Home() {
                   Visit site
                 </Link>
                 &nbsp;|&nbsp;
-                <Link
-                  href="https://github.com/Noroff-FEU-Assignments/project-exam-1-kimrm"
-                  target="_blank"
-                >
+                <Link href="https://github.com/kimrm/foodblog" target="_blank">
                   Github
                 </Link>
               </div>
