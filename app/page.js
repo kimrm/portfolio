@@ -62,6 +62,7 @@ export default function Home() {
             width={200}
             height={200}
             className={styles.profile_image}
+            blurDataURL="/gh_profile.png"
           />
           <h1 className={styles.heading_1}>Hi! I&apos;m Kim</h1>
         </div>
