@@ -20,8 +20,14 @@
   margin-block: 2rem;
 }
 
+.hero .description {
+  overflow: hidden;
+}
+
 .hero .description p {
-  transform: rotate(-1deg);
+  opacity: 0;
+
+  animation: fade-in 0.5s ease-in-out 0.5s forwards;
 }
 
 .projects {
@@ -36,6 +42,7 @@
   border-radius: 5px;
   box-shadow: 0 5px 30px 1px rgba(var(--card-border-rgb), 0.3);
   height: 100%;
+  overflow: hidden;
 }
 
 .project:hover {
@@ -60,6 +67,19 @@
   height: 200px;
   border-radius: 5px;
   overflow: hidden;
+  transform: translateY(-150%);
+  animation: slideDown 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .description {
