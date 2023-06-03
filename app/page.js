@@ -1,60 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import ThemeSwitcher from "./themeSwitcher";
 import styles from "./page.module.css";
+import ContactForm from "./contactForm";
 
 export default function Home() {
-  const [themeImage, setThemeImage] = useState("/icons8-light-50.png");
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("colorScheme");
-
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-
-    document.documentElement.style.setProperty("color-scheme", theme);
-
-    switch (theme) {
-      case "dark":
-        setThemeImage("/icons8-light-50.png");
-        break;
-      case "light":
-        setThemeImage("/icons8-dark-theme-50.png");
-        break;
-    }
-  }, [theme]);
-
-  function switchTheme() {
-    switch (theme) {
-      case "dark":
-        saveTheme("light");
-        break;
-      case "light":
-        saveTheme("dark");
-        break;
-    }
-  }
-
-  function saveTheme(colorScheme) {
-    localStorage.setItem("colorScheme", colorScheme);
-    setTheme(colorScheme);
-  }
-
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
-        <button onClick={switchTheme} className={styles.theme_button}>
-          <Image
-            src={themeImage}
-            alt="Light/Dark theme"
-            width={24}
-            height={24}
-          />
-        </button>
+        <ThemeSwitcher />
         <div className={styles.hero_heading}>
           <Image
             src="/gh_profile.png"
@@ -64,16 +18,19 @@ export default function Home() {
             className={styles.profile_image}
             blurDataURL="/gh_profile.png"
           />
-          <h1 className={styles.heading_1}>Hi! I&apos;m Kim</h1>
+          <div>
+            <h1 className={styles.heading_1}>Frontend Developer</h1>
+            <h2 className={styles.heading_2}>Kim Møller</h2>
+          </div>
         </div>
 
         <div className={styles.description}>
           <p>
-            A passionate developer specializing in PHP, JavaScript, HTML, and
-            CSS. I have a deep love for design and constantly strive to create
-            exceptional user experiences. Currently, I&apos;m trying to learn
-            what makes a good design, while exploring modern Javascript
-            frameworks like React and Next.js.
+            Hi! I&apos;m Kim. A passionate developer specializing in PHP,
+            JavaScript, HTML, and CSS. I have a deep love for design and
+            constantly strive to create exceptional user experiences. Currently,
+            I&apos;m trying to learn what makes a good design, while exploring
+            modern Javascript frameworks like React and Next.js.
           </p>
         </div>
       </section>
@@ -203,6 +160,82 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className={styles.skills_section}>
+        <h2 className={styles.heading_2}>My Current Tech Stack</h2>
+        <div className={styles.skills}>
+          <div className={styles.skill}>
+            <Image
+              src="/skills/icons8-html5-96.png"
+              alt="HTML5 logo"
+              width={100}
+              height={100}
+              className={styles.skill_image}
+            />
+            <h3 className={styles.heading_3}>HTML5</h3>
+          </div>
+          <div className={styles.skill}>
+            <Image
+              src="/skills/icons8-css3-96.png"
+              alt="CSS3 logo"
+              width={100}
+              height={100}
+              className={styles.skill_image}
+            />
+            <h3 className={styles.heading_3}>CSS3</h3>
+          </div>
+          <div className={styles.skill}>
+            <Image
+              src="/skills/icons8-javascript-96.png"
+              alt="Javascript logo"
+              width={100}
+              height={100}
+              className={styles.skill_image}
+            />
+            <h3 className={styles.heading_3}>Javascript</h3>
+          </div>
+          <div className={styles.skill}>
+            <Image
+              src="/skills/icons8-php-96.png"
+              alt="PHP logo"
+              width={100}
+              height={100}
+              className={styles.skill_image}
+            />
+            <h3 className={styles.heading_3}>PHP</h3>
+          </div>
+          <div className={styles.skill}>
+            <Image
+              src="/skills/icons8-visual-basic-96.png"
+              alt="Visual Basic logo"
+              width={100}
+              height={100}
+              className={styles.skill_image}
+            />
+            <h3 className={styles.heading_3}>VB .net</h3>
+          </div>
+          <div className={styles.skill}>
+            <Image
+              src="/skills/icons8-figma-96.png"
+              alt="PHP logo"
+              width={100}
+              height={100}
+              className={styles.skill_image}
+            />
+            <h3 className={styles.heading_3}>Figma</h3>
+          </div>
+        </div>
+      </section>
+      <section className={styles.contact_section}>
+        <div className={styles.form}>
+          <h2 className={styles.heading_2}>Contact me</h2>
+          <p className={styles.description}>
+            Would you like to work with me, or just wanna say hi? Feel free to
+            contact me. Fill out the form below or find me on social media via
+            the links below.
+          </p>
+          <ContactForm />
         </div>
       </section>
       <section>
