@@ -56,7 +56,7 @@ export default function ContactForm() {
     }
   }
   return (
-    <form action={sendForm} onSubmit={sendForm}>
+    <form action="" onSubmit={sendForm}>
       <div className={styles.form_field}>
         <label htmlFor="name">Your name</label>
         <input type="text" id="name" name="name" />
