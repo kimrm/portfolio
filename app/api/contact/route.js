@@ -24,6 +24,19 @@ export async function POST(request) {
     },
     secure: true,
   });
+
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        resolve(success);
+      }
+    });
+  });
+
   const mailData = {
     from: "kimrmoller@gmail.com",
     to: "kim@kimrune.dev",
@@ -32,12 +45,15 @@ export async function POST(request) {
     html: `<div>${form_message}</div><p>Sent from:
      ${form_name} [${form_email}]</p>`,
   };
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) {
-      res = { status: "Error", message: info };
-    } else {
-      res = { status: "Success", message: info };
-    }
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData, function (err, info) {
+      if (err) {
+        console.log(err);
+        reject(err);
+      } else {
+        resolve(info);
+      }
+    });
   });
 
   return NextResponse.json(res);
