@@ -1,3 +1,49 @@
+.heading_2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-block: 1rem;
+  color: #424242;
+}
+
+.heading_3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-block: 1rem;
+  color: #424242;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #8e8e8e;
+}
+
+.description {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+
+.description p {
+  position: relative;
+  margin: 0;
+  margin-block: 1rem;
+  line-height: 1.5rem;
+}
+
 .projects_section {
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out 0.5s forwards;

@@ -23,17 +23,18 @@ export default function Projects() {
                 It&apos;s a fictional webshop for rainwear.
               </p>
             </div>
-            <div>
+            <div className={styles.links}>
               <Link
                 href="https://splendid-custard-e9a90d.netlify.app/"
                 target="_blank"
+                className={styles.link}
               >
                 Visit site
               </Link>
-              &nbsp;|&nbsp;
               <Link
                 href="https://github.com/kimrm/rainy-days-ca"
                 target="_blank"
+                className={styles.link}
               >
                 Github
               </Link>
@@ -56,15 +57,19 @@ export default function Projects() {
                 It&apos;s a fictional website for a science museum.
               </p>
             </div>
-            <div>
+            <div className={styles.links}>
               <Link
                 href="https://joyful-kheer-f14cfb.netlify.app/"
                 target="_blank"
+                className={styles.link}
               >
                 Visit site
               </Link>
-              &nbsp;|&nbsp;
-              <Link href="https://github.com/kimrm/cosmu" target="_blank">
+              <Link
+                href="https://github.com/kimrm/cosmu"
+                target="_blank"
+                className={styles.link}
+              >
                 Github
               </Link>
             </div>
@@ -86,15 +91,19 @@ export default function Projects() {
                 It&apos;s a food blog.
               </p>
             </div>
-            <div>
+            <div className={styles.links}>
               <Link
                 href="https://astounding-jalebi-1c1cf5.netlify.app/"
                 target="_blank"
+                className={styles.link}
               >
                 Visit site
               </Link>
-              &nbsp;|&nbsp;
-              <Link href="https://github.com/kimrm/foodblog" target="_blank">
+              <Link
+                href="https://github.com/kimrm/foodblog"
+                target="_blank"
+                className={styles.link}
+              >
                 Github
               </Link>
             </div>
@@ -113,15 +122,19 @@ export default function Projects() {
             <div className={styles.description}>
               <p>This is a school project for a frontend developer course.</p>
             </div>
-            <div>
+            <div className={styles.links}>
               <Link
                 href="https://superb-hummingbird-948cfe.netlify.app/"
                 target="_blank"
+                className={styles.link}
               >
                 Visit site
               </Link>
-              &nbsp;|&nbsp;
-              <Link href="https://github.com/kimrm/movienight" target="_blank">
+              <Link
+                href="https://github.com/kimrm/movienight"
+                target="_blank"
+                className={styles.link}
+              >
                 Github
               </Link>
             </div>
