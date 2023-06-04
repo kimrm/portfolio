@@ -13,9 +13,42 @@ export default function ContactForm() {
   const [buttonTextStyleState, setButtonTextStyleState] = useState(
     styles.contact_send_text
   );
+  const [nameValidationStyle, setNameValidationStyle] = useState(
+    styles.validation_error
+  );
+  const [emailValidationStyle, setEmailValidationStyle] = useState(
+    styles.validation_error
+  );
+  const [messageValidationStyle, setMessageValidationStyle] = useState(
+    styles.validation_error
+  );
 
   async function sendForm(event) {
     event.preventDefault();
+    let validated = true;
+    if (event.target.name.value === "") {
+      setNameValidationStyle(styles.validation_error + " " + styles.show);
+      validated = false;
+    } else {
+      setNameValidationStyle(styles.validation_error);
+    }
+    if (event.target.email.value === "") {
+      setEmailValidationStyle(styles.validation_error + " " + styles.show);
+      validated = false;
+    } else {
+      setEmailValidationStyle(styles.validation_error);
+    }
+    if (event.target.message.value === "") {
+      setMessageValidationStyle(styles.validation_error + " " + styles.show);
+      validated = false;
+    } else {
+      setMessageValidationStyle(styles.validation_error);
+    }
+
+    if (!validated) {
+      return;
+    }
+
     const body = {
       form_name: event.target.name.value,
       form_email: event.target.email.value,
@@ -60,14 +93,23 @@ export default function ContactForm() {
       <div className={styles.form_field}>
         <label htmlFor="name">Your name</label>
         <input type="text" id="name" name="name" />
+        <span className={nameValidationStyle}>
+          Please write your name &#128522;
+        </span>
       </div>
       <div className={styles.form_field}>
         <label htmlFor="email">Your email</label>
         <input type="email" id="email" name="email" />
+        <span className={emailValidationStyle}>
+          Please write your email &#128522;
+        </span>
       </div>
       <div className={styles.form_field}>
         <label htmlFor="message">Message</label>
         <textarea id="message" name="message" rows="5"></textarea>
+        <span className={messageValidationStyle}>
+          You have not written any message &#128522;
+        </span>
       </div>
       <button type="submit" className={buttonState}>
         <div>
