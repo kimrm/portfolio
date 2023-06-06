@@ -52,7 +52,8 @@
 
 .projects_section {
   background-color: var(--card-background);
-  padding: 1rem;
+  /* background-color: #8e8e8e; */
+  padding: 2rem;
   border-radius: 5px;
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out 0.5s forwards;
@@ -69,13 +70,13 @@
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 4rem;
   margin-block: 2rem;
 }
 
 .project {
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 5px;
   height: 100%;
   overflow: hidden;
