@@ -1,12 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./projects.module.css";
+import styles from "@/styles/projects.module.css";
 
 export default function Projects() {
   return (
     <div className={styles.projects_section}>
-      <h2 className={styles.heading_2}>Latest projects</h2>
+      <h2 className={styles.heading_2}>My Latest projects</h2>
       <div className={styles.projects}>
+        <div className={styles.project}>
+          <Image
+            src="/foodblog.png"
+            alt="Next.js logo"
+            width={200}
+            height={200}
+            className={styles.project_image}
+          />
+          <div className={styles.project_content}>
+            <h3 className={styles.heading_3}>Møllers Kitchen Food blog</h3>
+            <div className={styles.description}>
+              <p>
+                This is a project exam for a frontend developer course.
+                It&apos;s a food blog.
+              </p>
+            </div>
+            <div className={styles.links}>
+              <Link
+                href="https://astounding-jalebi-1c1cf5.netlify.app/"
+                target="_blank"
+                className={styles.link}
+              >
+                Visit site
+              </Link>
+              <Link
+                href="https://github.com/kimrm/foodblog"
+                target="_blank"
+                className={styles.link}
+              >
+                Github
+              </Link>
+            </div>
+          </div>
+        </div>
         <div className={styles.project}>
           <Image
             src="/rainy_days.png"
@@ -75,40 +109,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className={styles.project}>
-          <Image
-            src="/foodblog.png"
-            alt="Next.js logo"
-            width={200}
-            height={200}
-            className={styles.project_image}
-          />
-          <div className={styles.project_content}>
-            <h3 className={styles.heading_3}>Møllers Kitchen Food blog</h3>
-            <div className={styles.description}>
-              <p>
-                This is a project exam for a frontend developer course.
-                It&apos;s a food blog.
-              </p>
-            </div>
-            <div className={styles.links}>
-              <Link
-                href="https://astounding-jalebi-1c1cf5.netlify.app/"
-                target="_blank"
-                className={styles.link}
-              >
-                Visit site
-              </Link>
-              <Link
-                href="https://github.com/kimrm/foodblog"
-                target="_blank"
-                className={styles.link}
-              >
-                Github
-              </Link>
-            </div>
-          </div>
-        </div>
+
         <div className={styles.project}>
           <Image
             src="/movielist.png"

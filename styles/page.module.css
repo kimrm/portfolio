@@ -16,6 +16,7 @@
   gap: 1rem;
   text-align: center;
   width: 100%;
+  max-width: var(--max-width);
   margin-block: 2rem;
 }
 
@@ -37,6 +38,7 @@
   width: 100%;
   margin-block: 2rem;
   padding-block: 2rem;
+  overflow: visible;
 }
 
 .skills {
@@ -76,7 +78,7 @@
   margin-block: 0.5rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #424242;
+  color: #a9a9a9;
 }
 
 .form_field > input,
@@ -106,7 +108,7 @@
 }
 
 .description {
-  display: inherit;
+  background-color: transparent;
   justify-content: inherit;
   align-items: inherit;
   font-size: 0.85rem;
@@ -131,10 +133,10 @@
 }
 
 .heading_1 {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 10vw, 4rem);
   font-weight: 600;
   margin-block: 1rem;
-
+  text-transform: capitalize;
   background: linear-gradient(
     to right,
     #7953cd 20%,
@@ -159,18 +161,17 @@
   }
 }
 .heading_2 {
-  font-size: 1.15rem;
-  font-weight: 600;
+  color: var(--heading2-color);
+  font-family: var(--font-mono);
   letter-spacing: 2px;
   margin-block: 1rem;
-  color: #424242;
+  background-color: transparent;
 }
 
 .heading_3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  color: var(--heading3-color);
+  font-family: var(--font-mono);
   margin-block: 1rem;
-  color: #424242;
 }
 
 .social_links {
@@ -182,6 +183,14 @@
 }
 
 .social_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social_link_icon {
   background-color: var(--icon-background);
   border-radius: 100%;
   padding: 0.5rem;
@@ -217,17 +226,8 @@
   }
 }
 
-.theme_button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
 .privacy_section {
-  color: #424242;
+  color: #a9a9a9;
 }
 
 .privacy_article h1 {
@@ -257,19 +257,52 @@
   line-height: 1.5rem;
 }
 
+.contact_me_container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_me_button {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(var(--card-border-rgb), 0.1);
+}
+
 .contact_button {
   position: relative;
   text-transform: uppercase;
   margin-block-start: 2em;
   font-weight: 900;
   letter-spacing: 2px;
-  border: none;
-  background: #40bd12;
+  border: 1px solid rgba(var(--card-border-rgb), 0.2);
+  background: transparent;
+  background-position: left;
   padding: 1rem 1rem;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
   min-width: 200px;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact_button:hover {
+  transition: all 0.2s ease-in-out;
+  background: #764ada;
+  animation: scale 0.2s ease-in-out forwards;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .contact_button.disabled {

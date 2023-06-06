@@ -1,16 +1,15 @@
 .heading_2 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  color: var(--heading2-color);
+  font-size: 1.1rem;
+  font-family: var(--font-mono);
   margin-block: 1rem;
-  color: #424242;
+  background-color: transparent;
 }
 
 .heading_3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  color: var(--heading3-color);
+  font-family: var(--font-mono);
   margin-block: 1rem;
-  color: #424242;
 }
 
 .links {
@@ -68,15 +67,9 @@
 .project {
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 5px 30px 1px rgba(var(--card-border-rgb), 0.3);
+  background-color: var(--card-background);
   height: 100%;
   overflow: hidden;
-}
-
-.project:hover {
-  box-shadow: 0 5px 10px 1px rgba(var(--card-border-rgb), 0.5);
-  transform: scale(1.01);
-  transition: all 0.2s ease-in-out;
 }
 
 .project_content {

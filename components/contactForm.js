@@ -1,18 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import styles from "./page.module.css";
+import { useState, useEffect } from "react";
+import styles from "@/styles/page.module.css";
 
 export default function ContactForm() {
-  const [buttonState, setButtonState] = useState(styles.contact_button);
-  const [buttonIconState, setButtonIconState] = useState(
+  const [formState, setFormState] = useState("pending");
+  const [formValidationState, setFormValidationState] = useState({
+    name: true,
+    email: true,
+    message: true,
+  });
+  const [buttonStyle, setButtonStyle] = useState(styles.contact_button);
+  const [buttonIconStyle, setButtonIconStyle] = useState(
     styles.contact_send_icon
   );
-  const [buttonTextState, setButtonTextState] = useState("Send message");
-  const [buttonTextStyleState, setButtonTextStyleState] = useState(
-    styles.contact_send_text
-  );
+  const [buttonText, setButtonText] = useState("Send message");
   const [nameValidationStyle, setNameValidationStyle] = useState(
     styles.validation_error
   );
@@ -23,29 +26,80 @@ export default function ContactForm() {
     styles.validation_error
   );
 
-  async function sendForm(event) {
-    event.preventDefault();
-    let validated = true;
-    if (event.target.name.value === "") {
+  useEffect(() => {
+    if (formValidationState.name === false) {
       setNameValidationStyle(styles.validation_error + " " + styles.show);
-      validated = false;
     } else {
       setNameValidationStyle(styles.validation_error);
     }
-    if (event.target.email.value === "") {
+    if (formValidationState.email === false) {
       setEmailValidationStyle(styles.validation_error + " " + styles.show);
-      validated = false;
     } else {
       setEmailValidationStyle(styles.validation_error);
     }
-    if (event.target.message.value === "") {
+    if (formValidationState.message === false) {
       setMessageValidationStyle(styles.validation_error + " " + styles.show);
-      validated = false;
     } else {
       setMessageValidationStyle(styles.validation_error);
     }
+  }, [formValidationState]);
 
-    if (!validated) {
+  useEffect(() => {
+    switch (formState) {
+      case "pending":
+        setButtonStyle(styles.contact_button);
+        setButtonIconStyle(styles.contact_send_icon);
+        setButtonText("Send message");
+        break;
+      case "sending":
+        setButtonStyle(styles.contact_button + " " + styles.disabled);
+        setButtonIconStyle(styles.contact_send_icon + " " + styles.active);
+        setButtonText("Sending...");
+        break;
+      case "success":
+        setButtonStyle(styles.contact_button + " " + styles.success);
+        setButtonIconStyle(styles.contact_send_icon);
+        setButtonText("Message sent!");
+        break;
+      case "error":
+        setButtonStyle(styles.contact_button + " " + styles.success);
+        setButtonIconStyle(styles.contact_send_icon);
+        setButtonText("Sending failed!");
+        console.log("Error");
+        break;
+    }
+  }, [formState]);
+
+  async function sendForm(event) {
+    event.preventDefault();
+
+    let nameValid = false;
+    let emailValid = false;
+    let messageValid = false;
+
+    if (event.target.name.value === "") {
+      nameValid = false;
+    } else {
+      nameValid = true;
+    }
+    if (event.target.email.value === "") {
+      emailValid = false;
+    } else {
+      emailValid = true;
+    }
+    if (event.target.message.value === "") {
+      messageValid = false;
+    } else {
+      messageValid = true;
+    }
+
+    setFormValidationState({
+      name: nameValid,
+      email: emailValid,
+      message: messageValid,
+    });
+
+    if (nameValid === false || emailValid === false || messageValid === false) {
       return;
     }
 
@@ -54,9 +108,7 @@ export default function ContactForm() {
       form_email: event.target.email.value,
       form_message: event.target.message.value,
     };
-    setButtonState(styles.contact_button + " " + styles.disabled);
-    setButtonIconState(styles.contact_send_icon + " " + styles.active);
-    setButtonTextState("Sending...");
+    setFormState("sending");
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -67,25 +119,21 @@ export default function ContactForm() {
     const data = await res.json();
     if (data && data.status === "Success") {
       setTimeout(() => {
-        setButtonTextState("Message sent!");
-        setButtonIconState(styles.contact_send_icon);
+        setFormState("success");
         event.target.name.value = "";
         event.target.email.value = "";
         event.target.message.value = "";
         setTimeout(() => {
-          setButtonTextState("Send message");
-          setButtonState(styles.contact_button);
+          setFormState("pending");
         }, 3000);
-      }, 3000);
+      }, 1000);
     } else {
       setTimeout(() => {
-        setButtonTextState("Sending failed!");
-        setButtonIconState(styles.contact_send_icon);
+        setFormState("error");
         setTimeout(() => {
-          setButtonTextState("Send message");
-          setButtonState(styles.contact_button);
-        }, 3000);
-      }, 3000);
+          setFormState("pending");
+        }, 1000);
+      }, 1000);
     }
   }
   return (
@@ -111,15 +159,15 @@ export default function ContactForm() {
           You have not written any message &#128522;
         </span>
       </div>
-      <button type="submit" className={buttonState}>
+      <button type="submit" className={buttonStyle}>
         <div>
-          <span className={buttonTextStyleState}>{buttonTextState}</span>
+          <span>{buttonText}</span>
           <Image
             src="/icons8-send-mail-25-white.png"
             alt="Send message"
             width={25}
             height={25}
-            className={buttonIconState}
+            className={buttonIconStyle}
           />
         </div>
       </button>

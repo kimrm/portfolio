@@ -1,0 +1,13 @@
+.instrument_panel {
+  position: fixed;
+  z-index: 10;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: #161616;
+  opacity: 0.9;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
