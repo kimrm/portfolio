@@ -137,7 +137,7 @@ export default function ContactForm() {
     }
   }
   return (
-    <form action="" onSubmit={sendForm}>
+    <form onSubmit={sendForm}>
       <div className={styles.form_field}>
         <label htmlFor="name">Your name</label>
         <input type="text" id="name" name="name" />
@@ -160,16 +160,14 @@ export default function ContactForm() {
         </span>
       </div>
       <button type="submit" className={buttonStyle}>
-        <div>
-          <span>{buttonText}</span>
-          <Image
-            src="/icons8-send-mail-25-white.png"
-            alt="Send message"
-            width={25}
-            height={25}
-            className={buttonIconStyle}
-          />
-        </div>
+        <span>{buttonText}</span>
+        <Image
+          src="/icons8-send-mail-25-white.png"
+          alt="Send message"
+          width={25}
+          height={25}
+          className={buttonIconStyle}
+        />
       </button>
     </form>
   );

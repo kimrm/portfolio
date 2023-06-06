@@ -108,6 +108,7 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.privacy_section}>
+        <h2 className={styles.heading_2}>Privacy disclosure</h2>
         <p>
           This site uses cookies. Read my{" "}
           <Link href="/privacy">privacy disclosure</Link> for further

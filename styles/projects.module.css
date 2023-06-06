@@ -18,16 +18,34 @@
 }
 
 .links {
+  margin-left: -1rem;
+  margin-bottom: -1rem;
   display: flex;
-  gap: 1rem;
+  gap: 2px;
 }
 
 .link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: #212121;
   color: var(--link-color);
   text-decoration: none;
+  overflow: hidden;
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(10);
+  }
 }
 
 .link:hover {
+  background-color: #000000;
   color: #8e8e8e;
 }
 

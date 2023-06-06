@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio | Kim Rune Møller",
+  title: "Portfolio | Kimrune.dev",
   description: "Developer from Norway creating engaging web experiences.",
 };
 

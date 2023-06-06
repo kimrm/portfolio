@@ -30,14 +30,14 @@ export default function Projects() {
                 target="_blank"
                 className={styles.link}
               >
-                Visit site
+                <span>Visit site</span>
               </Link>
               <Link
                 href="https://github.com/kimrm/foodblog"
                 target="_blank"
                 className={styles.link}
               >
-                Github
+                <span>Github</span>
               </Link>
             </div>
           </div>
@@ -66,14 +66,14 @@ export default function Projects() {
                 target="_blank"
                 className={styles.link}
               >
-                Visit site
+                <span>Visit site</span>
               </Link>
               <Link
                 href="https://github.com/kimrm/rainy-days-ca"
                 target="_blank"
                 className={styles.link}
               >
-                Github
+                <span>Github</span>
               </Link>
             </div>
           </div>
@@ -101,14 +101,14 @@ export default function Projects() {
                 target="_blank"
                 className={styles.link}
               >
-                Visit site
+                <span>Visit site</span>
               </Link>
               <Link
                 href="https://github.com/kimrm/cosmu"
                 target="_blank"
                 className={styles.link}
               >
-                Github
+                <span>Github</span>
               </Link>
             </div>
           </div>
@@ -136,14 +136,14 @@ export default function Projects() {
                 target="_blank"
                 className={styles.link}
               >
-                Visit site
+                <span>Visit site</span>
               </Link>
               <Link
                 href="https://github.com/kimrm/movienight"
                 target="_blank"
                 className={styles.link}
               >
-                Github
+                <span>Github</span>
               </Link>
             </div>
           </div>
