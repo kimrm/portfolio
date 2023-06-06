@@ -107,8 +107,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className={styles.privacy_section}>
-        <h2 className={styles.heading_2}>Privacy disclosure</h2>
+      <footer className={styles.privacy_section}>
+        <h4>&copy; 2023 - kimrune.dev</h4>
         <p>
           This site uses cookies. Read my{" "}
           <Link href="/privacy">privacy disclosure</Link> for further
@@ -120,7 +120,7 @@ export default function Home() {
             Icons8
           </a>
         </p>
-      </section>
+      </footer>
     </main>
   );
 }

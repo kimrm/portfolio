@@ -17,17 +17,18 @@
   text-align: center;
   width: 100%;
   max-width: var(--max-width);
-  margin-block: 2rem;
+  margin-block-end: 4rem;
   padding: 1rem;
 }
 
 .hero .description {
   overflow: hidden;
+  max-width: 80ch;
 }
 
 .hero .description p {
   opacity: 0;
-  margin-block-start: 4rem;
+  margin-block: 2rem;
   animation: fade-in 0.5s ease-in-out 0.5s forwards;
 }
 
@@ -254,7 +255,16 @@
   }
 }
 
+.privacy_section h4 {
+  margin-block-end: 1em;
+}
+
+.privacy_section p {
+  line-height: 1.5rem;
+}
+
 .privacy_section {
+  margin-block: 1rem;
   color: #a9a9a9;
 }
 
@@ -303,6 +313,19 @@
   animation: raise-in 0.5s ease-in-out 0.5s forwards;
 }
 
+.contact_me_button:hover {
+  background-color: rgba(var(--card-border-rgb), 0.1);
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 @keyframes raise-in {
   0% {
     opacity: 0;
@@ -333,17 +356,7 @@
 
 .contact_button:hover {
   transition: all 0.2s ease-in-out;
-  background: #764ada;
-  animation: scale 0.2s ease-in-out forwards;
-}
-
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
+  background: #754ada35;
 }
 
 .contact_button.disabled {
