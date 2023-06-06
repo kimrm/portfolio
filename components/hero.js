@@ -17,11 +17,11 @@ export default function Hero() {
 
       <div className={styles.description}>
         <p>
-          Hi! I'm Kim. A passionate developer specializing in PHP, JavaScript,
-          HTML, and CSS. Coding and UI design are my true passions, and I
-          constantly strive to create exceptional user experiences. Currently,
-          I'm trying to learn what makes a good UX, while exploring modern
-          Javascript frameworks like React and Next.js.
+          Hi! I&apos;m Kim. A passionate developer specializing in PHP,
+          JavaScript, HTML, and CSS. Coding and UI design are my true passions,
+          and I constantly strive to create exceptional user experiences.
+          Currently, I&apos;m trying to learn what makes a good UX, while
+          exploring modern Javascript frameworks like React and Next.js.
         </p>
       </div>
     </section>
