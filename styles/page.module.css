@@ -220,6 +220,19 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  opacity: 0;
+  animation: drop-in 0.5s ease-in-out 0.1s forwards;
+}
+
+@keyframes drop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .profile_image {
@@ -282,6 +295,19 @@
   border-radius: 5px;
   padding: 0.5rem 1rem;
   border: 1px solid rgba(var(--card-border-rgb), 0.1);
+  opacity: 0;
+  animation: raise-in 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes raise-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact_button {
