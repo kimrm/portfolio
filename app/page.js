@@ -13,7 +13,7 @@ export default function Home() {
         <Projects />
       </section>
       <section className={styles.skills_section}>
-        <h2 className={styles.heading_2}>My Current Tech Stack</h2>
+        <h2 className={styles.skill_heading_2}>My Current Tech Stack</h2>
         <div className={styles.skills}>
           <div className={styles.skill}>
             <Image
