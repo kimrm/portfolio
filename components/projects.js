@@ -19,8 +19,9 @@ export default function Projects() {
             <h3 className={styles.heading_3}>Møllers Kitchen Food blog</h3>
             <div className={styles.description}>
               <p>
-                This is a project exam for a frontend developer course.
-                It&apos;s a food blog.
+                Food blog made with vanilla javascript, HTML and CSS. Content is
+                served from a headless Wordpress installation. This project was
+                a project exam for a frontend developer course.
               </p>
             </div>
             <div className={styles.links}>
@@ -53,8 +54,10 @@ export default function Projects() {
             <h3 className={styles.heading_3}>Rainy Days</h3>
             <div className={styles.description}>
               <p>
-                This is a project I made for a frontend developer course.
-                It&apos;s a fictional webshop for rainwear.
+                This is a project I made for a frontend developer course
+                assignment. It&apos;s a fictional webshop for rainwear. Made
+                with vanilla javascript, HTML and CSS. Integrated with Wordpress
+                and wooCommerce API.
               </p>
             </div>
             <div className={styles.links}>
@@ -87,8 +90,9 @@ export default function Projects() {
             <h3 className={styles.heading_3}>Community Science Museum</h3>
             <div className={styles.description}>
               <p>
-                This is a semester project for a frontend developer course.
-                It&apos;s a fictional website for a science museum.
+                This was a semester project for a frontend developer course.
+                It&apos;s a fictional website for a science museum. Made with
+                vanilla javascript, HTML and CSS.
               </p>
             </div>
             <div className={styles.links}>
@@ -121,7 +125,10 @@ export default function Projects() {
           <div className={styles.project_content}>
             <h3 className={styles.heading_3}>Movie List</h3>
             <div className={styles.description}>
-              <p>This is a school project for a frontend developer course.</p>
+              <p>
+                This is a school project for a frontend developer course. The
+                site fetches data the iMDB top 100 ranked movies API.
+              </p>
             </div>
             <div className={styles.links}>
               <Link

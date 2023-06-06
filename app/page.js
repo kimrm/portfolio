@@ -72,13 +72,11 @@ export default function Home() {
           <h2 className={styles.heading_2}>Contact me</h2>
           <p className={styles.description}>
             Would you like to work with me, or just wanna say hi? Feel free to
-            contact me. Fill out the form below or find me on social media via
-            the links below.
+            contact me. Fill out the form or find me on social media via the
+            links below.
           </p>
           <ContactForm />
         </div>
-      </section>
-      <section>
         <div className={styles.social_links}>
           <Link
             href="https://www.linkedin.com/in/kim-rune-m%C3%B8ller-32523394"
