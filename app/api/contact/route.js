@@ -38,8 +38,8 @@ export async function POST(request) {
   });
 
   const mailData = {
-    from: "kimrmoller@gmail.com",
-    to: "kim@kimrune.dev",
+    from: process.env.GMAIL_SENDER_ADDRESS,
+    to: process.env.GMAIL_RECEIVER_ADDRESS,
     subject: `Message From ${form_name}`,
     text: form_message + " | Sent from: " + form_name + " [" + form_email + "]",
     html: `<div>${form_message}</div><p>Sent from:
