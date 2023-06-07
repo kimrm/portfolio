@@ -40,7 +40,7 @@ body {
 }
 
 section {
-  margin-block: 3rem;
+  margin-block: 7rem;
 }
 
 a {
@@ -50,6 +50,6 @@ a {
 
 @media screen and (max-width: 500px) {
   section {
-    margin-block: 3rem;
+    margin-block: 2rem;
   }
 }

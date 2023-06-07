@@ -39,7 +39,6 @@
   align-items: center;
   width: 100%;
   margin-block: 2rem;
-  padding: 5rem 1rem;
   overflow: visible;
   border-radius: 5px;
 
@@ -106,7 +105,9 @@
   display: block;
   margin-block: 0.5rem;
   font-size: 0.85rem;
-  color: #ff0000;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #de5e5e;
   display: none;
 }
 
@@ -192,7 +193,6 @@
 
 .social_links {
   display: flex;
-  align-items: center;
   gap: 1rem;
   margin-block: 5rem;
 }
@@ -264,7 +264,7 @@
 }
 
 .privacy_section {
-  margin-block: 1rem;
+  margin-block: 3rem;
   color: #a9a9a9;
 }
 
@@ -291,8 +291,19 @@
   margin-block-end: 1em;
 }
 
+.contact_section {
+  width: 100%;
+  border-block: 1px solid rgba(var(--card-border-rgb), 0.1);
+  padding-block-start: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--max-width);
+}
+
 .contact_section p {
   line-height: 1.5rem;
+  margin-block-end: 2em;
 }
 
 .contact_me_container {
@@ -305,9 +316,13 @@
 }
 
 .contact_me_button {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 800;
   text-decoration: none;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
   border: 1px solid rgba(var(--card-border-rgb), 0.1);
   opacity: 0;
   animation: raise-in 0.5s ease-in-out 0.5s forwards;

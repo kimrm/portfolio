@@ -70,6 +70,12 @@ export default function ContactForm() {
     }
   }, [formState]);
 
+  function validateEmail(email) {
+    const regEx = /\S+@\S+\.\S+/;
+    const patternMatches = regEx.test(email);
+    return patternMatches;
+  }
+
   async function sendForm(event) {
     event.preventDefault();
 
@@ -82,7 +88,10 @@ export default function ContactForm() {
     } else {
       nameValid = true;
     }
-    if (event.target.email.value === "") {
+    if (
+      event.target.email.value === "" ||
+      !validateEmail(event.target.email.value)
+    ) {
       emailValid = false;
     } else {
       emailValid = true;
@@ -149,7 +158,7 @@ export default function ContactForm() {
         <label htmlFor="email">Your email</label>
         <input type="email" id="email" name="email" />
         <span className={emailValidationStyle}>
-          Please write your email &#128522;
+          Please write a valid email address &#128522;
         </span>
       </div>
       <div className={styles.form_field}>
