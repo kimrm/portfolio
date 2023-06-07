@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-import styles from "./page.module.css";
+import styles from "@/styles/page.module.css";
 
 export default function Privacy() {
   return (
     <main className={styles.main}>
       <article className={styles.privacy_article}>
-        <h1>Privacy Disclosure</h1>
+        <h1>Privacy Disclosure for kimrune.dev</h1>
         <p>
           At kimrune.dev, I value your privacy and strive to maintain the
           highest standards of data protection. This privacy disclosure outlines
@@ -93,8 +93,10 @@ export default function Privacy() {
           please contact me at kim@kimrune.dev.
         </p>
         <p>Last updated: 2023/06/02</p>
+        <Link className={styles.privacy_back_link} href="/">
+          Go back to the homepage
+        </Link>
       </article>
-      <Link href="/">Back</Link>
     </main>
   );
 }

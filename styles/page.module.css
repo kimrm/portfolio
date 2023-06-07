@@ -280,8 +280,14 @@
   margin-block: 1rem;
 }
 
+.privacy_back_link {
+  display: block;
+  margin-block: 3rem;
+  padding-block: 2rem;
+}
+
 .privacy_article > *:not(:first-child) {
-  margin-block-start: 1em;
+  margin-block: 1em;
   max-width: 90ch;
 }
 
