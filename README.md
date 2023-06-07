@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My portfolio landing page
+
+## Description
+
+This is my current portfolio web site. 
+
+Live version of the site:
+https://portfolio.kimrune.dev
+
+## Built With
+
+- HTML
+- CSS
+- Next.js
 
 ## Getting Started
 
-First, run the development server:
+Node with NPM is required to build and run this project.
+
+### Installing
+
+1. Clone the repo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone git@github.com:kimrm/portfolio.git
+```
+2. Run npm install
+
+3. For the contact form to work you need to set env variables
+```env
+GMAIL_APP_PSW="your-gmail-app-password"
+GMAIL_APP_USR="email-address-for-sending"
+GMAIL_RECEIVER_ADDRESS="email-for-receiving"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Run "npm run dev" from the terminal and open http://localhost:3000 in a browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributing
 
-## Learn More
+Contributions are generally not requested.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[My LinkedIn page](https://www.linkedin.com/in/kim-rune-moller/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+No license required. Project is free to clone for example or educational purposes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
