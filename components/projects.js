@@ -9,6 +9,36 @@ export default function Projects() {
       <div className={styles.projects}>
         <div className={styles.project}>
           <Image
+            src="/knpsenja.png"
+            alt="Next.js logo"
+            width={200}
+            height={200}
+            className={styles.project_image}
+          />
+          <div className={styles.project_content}>
+            <h3 className={styles.heading_3}>
+              Kunnskaps- og Næringsparken Senja Website
+            </h3>
+            <div className={styles.description}>
+              <p>
+                This is a website I made for a local building housing several
+                businesses. It's a custom made Wordpress theme with custom
+                fields og posts. Styling is done with Bootstrap.
+              </p>
+            </div>
+            <div className={styles.links}>
+              <Link
+                href="https://knpsenja.no"
+                target="_blank"
+                className={styles.link}
+              >
+                <span>Visit site</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className={styles.project}>
+          <Image
             src="/foodblog.png"
             alt="Next.js logo"
             width={200}
