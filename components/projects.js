@@ -22,7 +22,7 @@ export default function Projects() {
             <div className={styles.description}>
               <p>
                 This is a website I made for a local building housing several
-                businesses. It's a custom made Wordpress theme with custom
+                businesses. It&apos;s a custom made Wordpress theme with custom
                 fields og posts. Styling is done with Bootstrap.
               </p>
             </div>
