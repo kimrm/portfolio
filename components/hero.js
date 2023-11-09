@@ -13,7 +13,7 @@ export default function Hero() {
       <div className={styles.description}>
         <p>
           Hi! I&apos;m Kim. A passionate developer specializing in PHP,
-          JavaScript, HTML, and CSS. Coding and UI design are my true passions,
+          Javascript, HTML, and CSS. Coding and UI design are my true passions,
           and I constantly strive to create exceptional user experiences.
         </p>
       </div>
