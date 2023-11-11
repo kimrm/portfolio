@@ -24,6 +24,8 @@
 .hero .description {
   overflow: hidden;
   max-width: 80ch;
+  font-size: 1rem;
+  color: #a9a9a9;
 }
 
 .hero .description p {
@@ -120,7 +122,7 @@
   background-color: transparent;
   justify-content: inherit;
   align-items: inherit;
-  font-size: 0.85rem;
+  font-size: 1rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
@@ -323,6 +325,8 @@
 
 .contact_me_button {
   text-transform: uppercase;
+  color: #bebebe;
+  background-color: #000;
   font-size: 0.8rem;
   letter-spacing: 2px;
   font-weight: 800;
@@ -330,12 +334,36 @@
   border-radius: 5px;
   padding: 1rem 1.5rem;
   border: 1px solid rgba(var(--card-border-rgb), 0.1);
-  opacity: 0;
-  animation: raise-in 0.5s ease-in-out 0.5s forwards;
+  box-shadow: 0 0 300px rgba(255, 255, 255, 0.44);
 }
 
 .contact_me_button:hover {
-  background-color: rgba(var(--card-border-rgb), 0.1);
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  animation: button_hover_animation 0.5s ease-in-out 0.1s forwards;
+}
+
+@keyframes button_hover_animation {
+  0% {
+    opacity: 0;
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 0 400px rgba(255, 255, 255, 0.9);
+    text-shadow: #000 0 0 10px;
+  }
+  20% {
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.9);
+    text-shadow: #000 0 0 10px;
+  }
+  100% {
+    opacity: 1;
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    text-shadow: #000 0 0 500px;
+  }
 }
 
 @keyframes scale {
