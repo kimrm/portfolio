@@ -6,7 +6,7 @@
   --body-background: #0c0a11;
   --background: radial-gradient(circle, #000000 20%, #130e1d 100%);
   --heading2-color: #a7a7a7;
-  --heading3-color: #e3e3e3;
+  --heading3-color: #a7a7a7;
   --icon-background: #2f2347;
   --card-background: #000000;
   --link-color: #9e83d3;
@@ -40,7 +40,7 @@ body {
 }
 
 section {
-  margin-block: 7rem;
+  padding-block: 7rem;
 }
 
 a {

@@ -53,7 +53,7 @@ export default function Projects() {
     {
       title: "Movie List",
       description:
-        "This is a school project for a frontend developer course. The site fetches data the iMDB top 100 ranked movies API.",
+        "This is a school project for a frontend developer course. The site fetches data from the iMDB top 100 ranked movies API.",
       image: "/movielist.png",
       link: "https://superb-hummingbird-948cfe.netlify.app/",
       github: "https://github.com/kimrm/movienight",

@@ -70,22 +70,25 @@
 }
 
 .form {
-  max-width: 500px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .form p {
   margin-block: 1rem;
+  max-width: 50ch;
 }
 
 .form_field {
-  margin-block-start: 1rem;
+  margin-block: 2rem;
+  max-width: 60ch;
 }
 
 .form_field > label {
   display: block;
   margin-block: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #a9a9a9;
 }
@@ -195,17 +198,8 @@
 
 .social_links {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   margin-block: 5rem;
-}
-
-.social_link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-inline: 1rem;
 }
 
 .social_link_icon {
@@ -266,52 +260,42 @@
 }
 
 .privacy_section {
-  margin-block: 3rem;
+  max-width: var(--max-width);
   color: #a9a9a9;
 }
 
 .privacy_article h1 {
   font-size: 2rem;
   font-weight: 600;
-  margin-block: 1rem;
 }
 
 .privacy_article h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-block: 1rem;
 }
 
 .privacy_back_link {
   display: block;
-  margin-block: 3rem;
-  padding-block: 2rem;
 }
 
 .privacy_article > *:not(:first-child) {
-  margin-block: 1em;
   max-width: 90ch;
 }
 
 .privacy_article ul,
 .privacy_article ol {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
 }
 
 .contact_section {
   width: 100%;
   border-block: 1px solid rgba(var(--card-border-rgb), 0.1);
-  padding-block-start: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   max-width: var(--max-width);
 }
 
 .contact_section p {
   line-height: 1.5rem;
-  margin-block-end: 2em;
 }
 
 .contact_me_container {
