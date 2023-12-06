@@ -4,6 +4,14 @@ import styles from "@/styles/projects.module.css";
 export default function Projects() {
   const projects = [
     {
+      title: "My CV page",
+      description:
+        "This is a page I made for my CV. It's made with React and Tailwind CSS.",
+      image: "/cv.png",
+      link: "https://cv.kimrune.dev",
+      github: "https://github.com/kimrm/resume",
+    },
+    {
       title: "Kunnskaps- og Næringsparken Senja Website",
       description:
         "This is a website I made for a local building housing several businesses. It's a custom made Wordpress theme with custom fields og posts. Styling is done with Bootstrap.",

@@ -81,6 +81,9 @@ export default function Home() {
                 linkedIn
               </Link>
               <Link href="http://github.com/kimrm">Github</Link>
+              <Link href="https://cv.kimrune.dev" className={styles.cv_button}>
+                My resume (in Norwegian)
+              </Link>
             </div>
           </div>
           <div>
