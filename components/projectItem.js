@@ -8,8 +8,8 @@ export default function ProjectItem({ project }) {
       <Image
         src={project.image}
         alt={project.title + " thumbnail"}
-        width={200}
-        height={200}
+        width={400}
+        height={400}
         className={styles.project_image}
       />
       <div className={styles.project_content}>

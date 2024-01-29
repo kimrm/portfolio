@@ -4,6 +4,14 @@ import styles from "@/styles/projects.module.css";
 export default function Projects() {
   const projects = [
     {
+      title: "Auction House",
+      description:
+        "This is a school project for a frontend developer course. It's a fictional auction house. Made with Javascript and Tailwind CSS.",
+      image: "/auction_house.png",
+      link: "https://cute-blancmange-efcb8b.netlify.app/",
+      github: "https://github.com/kimrm/auction-house",
+    },
+    {
       title: "My CV page",
       description:
         "This is a page I made for my CV. It's made with React and Tailwind CSS.",
