@@ -77,13 +77,15 @@ export default function Projects() {
   ];
 
   return (
-    <div className={styles.projects_section}>
-      <h2 className={styles.heading_2}>My Latest projects</h2>
-      <div className={styles.projects}>
-        {projects.map((project, index) => (
-          <ProjectItem key={index} project={project} />
-        ))}
-      </div>
-    </div>
+      <section>
+        <div className={styles.projects_section}>
+          <h2 className={styles.heading_2}>My Latest projects</h2>
+          <div className={styles.projects}>
+            {projects.map((project, index) => (
+              <ProjectItem key={index} project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
   );
 }
