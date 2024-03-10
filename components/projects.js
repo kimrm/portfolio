@@ -4,6 +4,14 @@ import styles from "@/styles/projects.module.css";
 export default function Projects() {
   const projects = [
     {
+      title: "E-commerce site",
+      description:
+        "E-commerce site made with Vite, React and TypeScript for a school project.",
+      image: "/ecommerce.jpg",
+      link: "https://sweet-treacle-b48080.netlify.app/",
+      github: "https://github.com/kimrm/e-commerce-course-assignment",
+    },
+    {
       title: "Auction House",
       description:
         "This is a school project for a frontend developer course. It's a fictional auction house. Made with Javascript and Tailwind CSS.",
@@ -77,15 +85,15 @@ export default function Projects() {
   ];
 
   return (
-      <section>
-        <div className={styles.projects_section}>
-          <h2 className={styles.heading_2}>My Latest projects</h2>
-          <div className={styles.projects}>
-            {projects.map((project, index) => (
-              <ProjectItem key={index} project={project} />
-            ))}
-          </div>
+    <section>
+      <div className={styles.projects_section}>
+        <h2 className={styles.heading_2}>My Latest projects</h2>
+        <div className={styles.projects}>
+          {projects.map((project, index) => (
+            <ProjectItem key={index} project={project} />
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
   );
 }
