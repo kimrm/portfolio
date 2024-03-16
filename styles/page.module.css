@@ -6,19 +6,70 @@
   align-items: center;
   min-height: 100vh;
   padding: 1rem;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 0.5) 0%,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-size: 100% 20%;
+  background-repeat: no-repeat;
+}
+
+.content_container {
+  width: 100%;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   gap: 1rem;
-  text-align: center;
+  text-align: left;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 1100px;
   margin-block-end: 4rem;
-  padding: 1rem;
+}
+
+.p_description {
+  overflow: hidden;
+  max-width: 80ch;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: #a9a9a9;
+  font-family: var(--font-merriweather);
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out 0.5s forwards;
+  margin-block-end: 1rem;
+}
+
+.p_quote {
+  overflow: hidden;
+  text-align: center;
+  padding-block: 2rem;
+  max-width: 80ch;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: #a9a9a9;
+  font-family: var(--font-merriweather);
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out 0.5s forwards;
+  .marker {
+    color: #754ada;
+    background-color: #754ada35;
+  }
 }
 
 .hero .description {
@@ -26,9 +77,11 @@
   max-width: 80ch;
   font-size: 1rem;
   color: #a9a9a9;
+  font-family: var(--font-merriweather);
 }
 
 .hero .description p {
+  font-family: var(--font-sans);
   opacity: 0;
   margin-block: 2rem;
   animation: fade-in 0.5s ease-in-out 0.5s forwards;
@@ -40,7 +93,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-block: 2rem;
+  margin-block: 6rem;
   overflow: visible;
   border-radius: 5px;
 
@@ -102,7 +155,6 @@
   border-radius: 5px;
   background-color: rgba(var(--card-border-rgb), 0.1);
   font-size: 0.85rem;
-  font-family: var(--font-mono);
   resize: none;
 }
 
@@ -129,7 +181,6 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
 .description a {
@@ -146,24 +197,34 @@
   line-height: 1.5rem;
 }
 
-.heading_1 {
-  font-size: clamp(2.5rem, 10vw, 4rem);
-  font-weight: 600;
+.heading {
+  font-family: var(--font-oswald);
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  font-weight: 900;
   margin-block: 1rem;
-  text-transform: capitalize;
-  background: linear-gradient(
-    to right,
-    #7953cd 20%,
-    #016894 30%,
-    #013045 70%,
-    #764ada 80%
-  );
+  text-transform: uppercase;
+  background: linear-gradient(to right, #100b1c 20%, #016894 30%, #013045 70%);
+  background-position: 100% 50%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   background-size: 500% auto;
-  animation: textShine 10s ease-in-out infinite alternate;
+  opacity: 0;
+  animation: drop-in 0.5s ease-in-out 0.1s forwards;
+}
+
+.heading_1 {
+  font-family: var(--font-oswald);
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  font-weight: 900;
+  margin-block: 1rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #100b1c 20%, #016894 30%, #013045 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
 }
 
 @keyframes textShine {
@@ -176,15 +237,17 @@
 }
 .heading_2 {
   color: var(--heading2-color);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
   letter-spacing: 2px;
   margin-block: 1rem;
+  text-transform: capitalize;
+  text-decoration: wavy;
   background-color: transparent;
 }
 
 .skill_heading_2 {
   color: var(--heading2-color);
-  font-family: var(--font-mono);
   font-size: clamp(1rem, 3vw, 2rem);
   margin-block: 1rem;
   background-color: transparent;
@@ -192,7 +255,6 @@
 
 .heading_3 {
   color: var(--heading3-color);
-  font-family: var(--font-mono);
   margin-block: 1rem;
 }
 
@@ -288,12 +350,9 @@
   max-width: 90ch;
 }
 
-.privacy_article ul,
-.privacy_article ol {
-}
-
 .contact_section {
   width: 100%;
+  padding-block: 2rem;
   border-block: 1px solid rgba(var(--card-border-rgb), 0.1);
   display: flex;
   flex-direction: column;
@@ -316,7 +375,13 @@
 .contact_me_button {
   text-transform: uppercase;
   color: #bebebe;
-  background-color: #000;
+  background-color: var(--icon-background);
+  background: linear-gradient(
+    90deg,
+    #2f2347 0%,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(0, 0, 0, 1) 100%
+  );
   font-size: 0.8rem;
   letter-spacing: 2px;
   font-weight: 800;
@@ -324,7 +389,6 @@
   border-radius: 5px;
   padding: 1rem 1.5rem;
   border: 1px solid rgba(var(--card-border-rgb), 0.1);
-  box-shadow: 0 0 300px rgba(255, 255, 255, 0.44);
 }
 
 .contact_me_button:hover {
@@ -333,24 +397,43 @@
   animation: button_hover_animation 0.5s ease-in-out 0.1s forwards;
 }
 
+.about_me_button {
+  text-transform: uppercase;
+  color: #bebebe;
+  background-color: #000;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(var(--card-border-rgb), 0.1);
+}
+
+.about_me_button:hover {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  background-color: #2f2347;
+}
+
 @keyframes button_hover_animation {
   0% {
     opacity: 0;
     background-color: #fff;
-    color: #000000;
+    color: #fff;
     box-shadow: 0 0 400px rgba(255, 255, 255, 0.9);
     text-shadow: #000 0 0 10px;
   }
   20% {
     background-color: #fff;
-    color: #000000;
+    color: #fff;
     box-shadow: 0 0 100px rgba(255, 255, 255, 0.9);
     text-shadow: #000 0 0 10px;
   }
   100% {
     opacity: 1;
     background-color: #fff;
-    color: #000000;
+    color: #fff;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
     text-shadow: #000 0 0 500px;
   }
@@ -477,4 +560,9 @@
   .hero_heading {
     flex-direction: column;
   }
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
 }

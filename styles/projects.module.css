@@ -1,25 +1,20 @@
 .heading_2 {
   color: var(--heading2-color);
-  font-size: 1.1rem;
-  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
   background-color: transparent;
+  letter-spacing: 2px;
   padding-top: 3rem;
 }
 
 .heading_3 {
   color: var(--heading3-color);
-  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 0.85rem;
   margin-block: 1rem;
   padding-block: 1rem;
-}
-
-@media screen and (max-width: 500px) {
-  .heading_2 {
-    text-align: center;
-  }
 }
 
 .links {
@@ -35,6 +30,23 @@
   color: var(--link-color);
   text-decoration: none;
   overflow: hidden;
+}
+
+.button {
+  text-transform: uppercase;
+  color: #bebebe;
+  background-color: #000;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
 }
 
 @keyframes ripple {
@@ -60,7 +72,6 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
 .description p {

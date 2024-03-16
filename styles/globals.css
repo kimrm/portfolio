@@ -3,14 +3,16 @@
   -moz-osx-font-smoothing: grayscale;
 
   color-scheme: dark;
-  --body-background: #0c0a11;
-  --background: radial-gradient(circle, #000000 20%, #130e1d 100%);
-  --heading2-color: #a7a7a7;
+  --body-background: #000;
+  /* --background: radial-gradient(circle, #000000 20%, #0e0915 100%); */
+  --heading2-color: #414141;
   --heading3-color: #a7a7a7;
   --icon-background: #2f2347;
   --card-background: #000000;
   --link-color: #9e83d3;
-  --max-width: 1100px;
+  --logo-color: #cecece;
+  --nav-link-color: #ffffff;
+  --max-width: 1200px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -37,10 +39,26 @@ body {
   background-color: var(--body-background);
   background-image: var(--background);
   height: 100%;
+  font-family: var(--font-inter);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-block-end: 2rem;
+  padding: 1.5rem 1rem;
+  align-items: center;
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    height: 50px;
+  }
 }
 
 section {
-  padding-block: 7rem;
+  margin-block: 1rem;
 }
 
 a {
@@ -50,6 +68,6 @@ a {
 
 @media screen and (max-width: 500px) {
   section {
-    margin-block: 2rem;
+    margin-block: 4rem;
   }
 }

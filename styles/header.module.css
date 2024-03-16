@@ -1,0 +1,86 @@
+.logo {
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  color: var(--logo-color);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100;
+  margin: 0 auto;
+}
+
+.navLink {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.navLinkActive {
+  color: #444;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #8e8e8e;
+}
+
+.hiddenMd {
+  display: inline-block;
+  @media screen and (max-width: 785px) {
+    display: none;
+  }
+}
+
+.hiddenSm {
+  display: inline-block;
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  height: 32px;
+  width: 32px;
+  border: none;
+  background-color: transparent;
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover path:nth-child(1) {
+  transform: translateX(9px) translateY(-1px) rotate(45deg);
+}
+
+.icon:hover path:nth-child(2) {
+  transform: translateY(13px) translateX(-4px) rotate(-45deg);
+}
+
+.icon:hover path:nth-child(3) {
+  opacity: 0;
+}

@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "@/styles/page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 function Skills(props) {
   return (
     <section className={styles.skills_section}>
-      <h2 className={styles.skill_heading_2}>My Current Tech Stack</h2>
+      <h2 className={styles.skill_heading_2}>Most used Tech Stack</h2>
       <div className={styles.skills}>
         <div className={styles.skill}>
           <Image
@@ -13,7 +14,6 @@ function Skills(props) {
             alt="HTML5 logo"
             width={80}
             height={80}
-            className={styles.skill_image}
           />
           <h3 className={styles.heading_3}>HTML5</h3>
         </div>
@@ -23,7 +23,6 @@ function Skills(props) {
             alt="CSS3 logo"
             width={80}
             height={80}
-            className={styles.skill_image}
           />
           <h3 className={styles.heading_3}>CSS3</h3>
         </div>
@@ -33,7 +32,6 @@ function Skills(props) {
             alt="Javascript logo"
             width={80}
             height={80}
-            className={styles.skill_image}
           />
           <h3 className={styles.heading_3}>JavaScript</h3>
         </div>
@@ -43,7 +41,6 @@ function Skills(props) {
             alt="Typescript logo"
             width={80}
             height={80}
-            className={styles.skill_image}
           />
           <h3 className={styles.heading_3}>TypeScript</h3>
         </div>
@@ -53,7 +50,6 @@ function Skills(props) {
             alt="React logo"
             width={80}
             height={80}
-            className={styles.skill_image}
           />
           <h3 className={styles.heading_3}>React</h3>
         </div>
@@ -63,7 +59,6 @@ function Skills(props) {
             alt="PHP logo"
             width={80}
             height={80}
-            className={styles.skill_image}
           />
           <h3 className={styles.heading_3}>PHP</h3>
         </div>
@@ -73,11 +68,20 @@ function Skills(props) {
             alt="PHP logo"
             width={80}
             height={80}
-            className={styles.skill_image}
           />
           <h3 className={styles.heading_3}>Figma</h3>
         </div>
       </div>
+      <em className={styles.p_quote}>
+        I love all sorts of coding and I touch on a lot of technologies in my
+        day to day projects but the one combo I always enjoy the most is{" "}
+        <span className={styles.marker}>React and Typescript</span>. The
+        elegance and playfulness of Javascript and React with the structure of
+        types with Typescript makes every project a joy to work with.
+      </em>
+      <Link href="/about" className={styles.button}>
+        Read more about me
+      </Link>
     </section>
   );
 }
