@@ -107,7 +107,7 @@ export default function ProjectsPreview() {
   return (
     <section>
       <div className={styles.projects_section}>
-        <h2 className={styles.heading_2}>Some things I'm working on</h2>
+        <h2 className={styles.heading_2}>Some things I&apos;m working on</h2>
         <div className={styles.projects}>
           {projects.map(
             (project, index) =>

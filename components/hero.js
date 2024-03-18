@@ -17,10 +17,10 @@ export default function Hero() {
           <span className={styles.emoji} role="img" aria-label="wave">
             👋
           </span>{" "}
-          I'm a front- and backend developer specializing in PHP and JavaScript.
-          Coding and developing great UI is my true passion and I constantly
-          strive to create exceptional user experiences. I'm always looking for
-          interesting projects so feel free to contact me.
+          I&apos;m a front- and backend developer specializing in PHP and
+          JavaScript. Coding and developing great UI is my true passion and I
+          constantly strive to create exceptional user experiences. I&apos;m
+          always looking for interesting projects so feel free to contact me.
         </p>
       </div>
       <div className={styles.buttons}>
