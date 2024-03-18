@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "@/styles/page.module.css";
 import Link from "next/link";
 
@@ -7,19 +6,31 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.hero_heading}>
         <div>
-          <h1 className={styles.heading_1}>Creating amazing web experiences</h1>
+          <h1 className={styles.heading_1}>
+            Creating amazing digital experiences
+          </h1>
         </div>
       </div>
       <div className={styles.description}>
         <p>
-          Hi! I&apos;m Kim. A passionate developer specializing in PHP,
-          Javascript, HTML, and CSS. Coding and UI design are my true passions,
-          and I constantly strive to create exceptional user experiences.
+          Hi{" "}
+          <span className={styles.emoji} role="img" aria-label="wave">
+            👋
+          </span>{" "}
+          I&apos;m a front- and backend developer specializing in PHP and
+          JavaScript. Coding and developing great UI is my true passion and I
+          constantly strive to create exceptional user experiences. I&apos;m
+          always looking for interesting projects so feel free to contact me.
         </p>
       </div>
-      <Link href="#contact" className={styles.contact_me_button}>
-        Contact me
-      </Link>
+      <div className={styles.buttons}>
+        <Link href="/contact" className={styles.contact_me_button}>
+          Contact me
+        </Link>
+        <Link href="/about" className={styles.about_me_button}>
+          About me
+        </Link>
+      </div>
     </section>
   );
 }

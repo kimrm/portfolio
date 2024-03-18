@@ -1,21 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
-import styles from "@/styles/page.module.css";
-import ContactForm from "@/components/contactForm";
-import Projects from "@/components/projects";
 import Hero from "@/components/hero";
-import Footer from "@/components/footer";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
+import ProjectsPreview from "@/components/projectsPreview";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <>
       <Hero />
-      <Projects />
+      <ProjectsPreview />
       <Skills />
       <Contact />
-      <Footer />
-    </main>
+    </>
   );
 }

@@ -1,0 +1,122 @@
+.logo {
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  color: var(--logo-color);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100;
+  margin: 0 auto;
+}
+
+.fixed {
+  background-color: #000;
+  transition: background-color 0.3s ease;
+  opacity: 0.9;
+}
+
+.navLink {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.navLinkMobile {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.navLinkActive {
+  color: #444;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover,
+.navLinkMobile:hover {
+  color: #8e8e8e;
+}
+
+.navMenuMobile {
+  display: none;
+  list-style-type: none;
+  border-bottom: 1px solid #8e8e8e;
+
+  @media screen and (max-width: 785px) {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+.open {
+  display: flex;
+  @media screen and (min-width: 785px) {
+    display: none;
+  }
+}
+
+.navMenu {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  align-items: center;
+  height: 50px;
+}
+
+.hiddenMd {
+  display: inline-block;
+  @media screen and (max-width: 785px) {
+    display: none;
+  }
+}
+
+.hiddenSm {
+  display: inline-block;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  height: 32px;
+  width: 32px;
+  border: none;
+  background-color: transparent;
+  @media screen and (max-width: 785px) {
+    display: inline-block;
+  }
+}
+
+.icon {
+  cursor: pointer;
+}

@@ -1,7 +1,8 @@
 import ProjectItem from "./projectItem";
 import styles from "@/styles/projects.module.css";
+import Link from "next/link";
 
-export default function Projects() {
+export default function ProjectsPreview() {
   const projects = [
     {
       title: "Info-screen for conference and meeting rooms.",
@@ -24,11 +25,11 @@ export default function Projects() {
     {
       title: "Auction House",
       description:
-        "Vanilla SPA Javascript demo auction site. It's built with Vite and uses Tailwind CSS for styling. The site is deployed on Netlify.",
+        "Vanilla Javascript demo auction site. It's built with Vite and uses Tailwind CSS for styling. The site is deployed on Netlify.",
       image: "/auction_house.png",
       link: "https://cute-blancmange-efcb8b.netlify.app/",
       github: "https://github.com/kimrm/auction-house",
-      isShowcase: false,
+      isShowcase: true,
     },
     {
       title: "My CV page",
@@ -106,13 +107,17 @@ export default function Projects() {
   return (
     <section>
       <div className={styles.projects_section}>
-        <h2 className={styles.heading_2}>My latest projects</h2>
+        <h2 className={styles.heading_2}>Some things I&apos;m working on</h2>
         <div className={styles.projects}>
-          {projects.map((project, index) => (
-            <ProjectItem key={index} project={project} />
-          ))}
+          {projects.map(
+            (project, index) =>
+              project.isShowcase && (
+                <ProjectItem key={index} project={project} />
+              )
+          )}
         </div>
       </div>
+      <Link href="/projects">See more projects</Link>
     </section>
   );
 }
