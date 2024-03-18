@@ -115,7 +115,7 @@ export default function Header() {
             <Link
               className={`${styles.navLink} ${
                 pathname === "/" ? styles.navLinkActive : ""
-              } ${styles.hiddenSm}`}
+              } `}
               href={"/"}
               scroll={true}
               onClick={handleLinkClick}
@@ -127,7 +127,7 @@ export default function Header() {
             <Link
               className={`${styles.navLink} ${
                 pathname === "/projects" ? styles.navLinkActive : ""
-              } ${styles.hiddenSm}`}
+              } `}
               href={"/projects"}
               scroll={true}
               onClick={handleLinkClick}
@@ -139,7 +139,7 @@ export default function Header() {
             <Link
               className={`${styles.navLink} ${
                 pathname === "/about" ? styles.navLinkActive : ""
-              } ${styles.hiddenMd}`}
+              } `}
               href={"/about"}
               scroll={true}
               onClick={handleLinkClick}
@@ -151,7 +151,7 @@ export default function Header() {
             <Link
               className={`${styles.navLink} ${
                 pathname === "/contact" ? styles.navLinkActive : ""
-              } ${styles.hiddenMd}`}
+              } `}
               href="/contact"
               scroll={true}
               onClick={handleLinkClick}
@@ -165,7 +165,7 @@ export default function Header() {
                 pathname.toLowerCase().includes("/blog")
                   ? styles.navLinkActive
                   : ""
-              } ${styles.hiddenMd}`}
+              } `}
               href="/blog"
               scroll={true}
               onClick={handleLinkClick}

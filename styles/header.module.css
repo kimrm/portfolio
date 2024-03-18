@@ -90,6 +90,9 @@
   gap: 1rem;
   align-items: center;
   height: 50px;
+  @media screen and (max-width: 785px) {
+    display: none;
+  }
 }
 
 .hiddenMd {

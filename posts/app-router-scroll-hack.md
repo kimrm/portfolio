@@ -16,7 +16,7 @@ No need to say, this often leads to a bad user experience.
 
 A little hack to fix this is to insert a component above the header in the layout component, that upon loading automatically scrolls to the top of the page. This component adds a runs the window.scroll function and returns an empty element.
 
-```
+```js
 
 // app/components/scroll.js
 
@@ -35,7 +35,7 @@ export default function Scroll() {
 }
 ```
 
-```
+```js
 
 // app/layout.js
 
