@@ -7,8 +7,8 @@ export default function ProjectsPreview() {
     {
       title: "Info-screen for conference and meeting rooms.",
       description:
-        "I'm currently working on a project for a client where I'm building a web app for displaying information on screens in conference and meeting rooms. The app is built with Remix and Typescript and is integrated with Google Calendar.",
-      image: "",
+        "I'm currently working on a project for a client where I'm building a web app for displaying information on screens in conference and meeting rooms. The app is built with Remix and Typescript and is integrated with Google Calendar. More information will be available soon.",
+      image: "/rombooking.png",
       link: "",
       github: "",
       isShowcase: true,
@@ -29,7 +29,7 @@ export default function ProjectsPreview() {
       image: "/auction_house.png",
       link: "https://cute-blancmange-efcb8b.netlify.app/",
       github: "https://github.com/kimrm/auction-house",
-      isShowcase: false,
+      isShowcase: true,
     },
     {
       title: "My CV page",

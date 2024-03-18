@@ -18,3 +18,45 @@
 .title:hover {
   color: #8e8e8e;
 }
+
+.post {
+  margin-block: 2rem;
+  width: 100%;
+}
+
+.post > div h1 {
+  font-size: 2rem;
+  margin-block: 1rem;
+}
+
+.post > div h2 {
+  font-size: 1.5rem;
+  margin-block: 1rem;
+  color: #aaa;
+}
+
+.post > div p {
+  margin-block: 1rem;
+  max-width: 80ch;
+  color: #e0e0e0;
+}
+
+.post > div pre {
+  background-color: #232323;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+  margin-block: 2rem;
+  overflow-x: auto;
+}
+
+.breadcrumb {
+  margin-block: 2rem;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.breadcrumb > a {
+  color: #aaa;
+  text-decoration: none;
+}

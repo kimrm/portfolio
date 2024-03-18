@@ -1,24 +1,25 @@
 import styles from "@/styles/page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function page() {
   return (
     <div className={styles.content_container}>
       <h1 className={styles.heading}>About me</h1>
-      <div style={{ display: "flex" }}>
+      <div className={styles.flex_container}>
         <Image
           src="/profile.jpg"
           alt="Kim Rune Møller"
           width={200}
           height={200}
-          style={{ marginInlineEnd: "2rem" }}
         />
         <div>
           <p className={styles.p_description}>
-            I love coding. Since I was a child I have been fascinated by the
+            I love coding, and it has been a big part of my life for as long as
+            I can remember. Since I was a child I have been fascinated by the
             idea of creating something that others can use. I remember, back in
-            the 80-s and 90-s copying code from computer magazines on to my
-            Commodore 64 and the joy of seeing something happening on the
+            the early 90s copying code from computer magazines on to my
+            Commodore 64 and the thrill of seeing something happening on the
             screen.
           </p>
           <p className={styles.p_description}>
@@ -44,14 +45,39 @@ export default function page() {
             with web development.
           </p>
           <p className={styles.p_description}>
-            Now I'm mostly focused on React and Typescript, utilizing frameworks
-            like Nextjs and Remix, but I still do some freelance VB.NET
-            development, creating native Windows software for the car dealership
-            market. I also love helping others and sharing my knowledge.
+            Now {"I'm"} mostly focused on React and Typescript, utilizing
+            frameworks like Nextjs and Remix, but I still do some freelance
+            VB.NET development now and then. I also love helping others and
+            sharing my knowledge whenever I can.
           </p>
           <p className={styles.p_description}>
-            I'm also enthusiastic about design and is working on improving my
-            skills every chance I get.
+            {"I'm"} enthusiastic about design and is working on improving my
+            design skills every chance I get. My design philosophy is about
+            simplicity and following the best practices in UI/UX design. I
+            believe that a good design is one that is intuitive and easy to use,
+            and that it should be accessible to everyone.
+          </p>
+          <p className={styles.p_description}>
+            My motivation for this website is to have a place where I can test
+            out new ideas, and also showcase my work and share my thoughts and
+            experiences with web development and programming in general. I also
+            use this website to build my own library of tips and tricks that I
+            can use in the future.
+          </p>
+          <p className={styles.p_description}>
+            Please{" "}
+            <Link href="/contact" scroll={true} className={styles.link}>
+              contact me
+            </Link>{" "}
+            or visit my{" "}
+            <a
+              href="https://cv.kimrune.dev/?lang=en"
+              target="_blank"
+              className={styles.link}
+            >
+              online resume
+            </a>{" "}
+            if {"you're"} more curious about my professional background.
           </p>
         </div>
       </div>

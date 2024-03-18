@@ -4,6 +4,7 @@ import { Inter, Oswald, Merriweather_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Scroll from "@/components/scroll";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,11 +35,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${oswald.variable} ${merriweather.variable}`}
     >
-      <body>
-        <div className={styles.container}>
-          <Header />
-          <main className={styles.main}>{children}</main>
-        </div>
+      <body className={styles.container}>
+        <Scroll />
+        <Header />
+        <main className={styles.main}>{children}</main>
         <Footer />
         <Analytics />
       </body>

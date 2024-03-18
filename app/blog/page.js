@@ -19,14 +19,13 @@ export default async function page() {
         build my own library of tips and tricks that I can use in the future.
       </p>
       <ul className={bs.list}>
-        {posts.map(({ id, date, title, exerpt }) => (
+        {posts.map(({ id, date, title, excerpt }) => (
           <li key={id}>
-            <Link href="/" className={bs.title}>
+            {date}
+            <Link href={`/blog/${id}`} className={bs.title}>
               <h2>{title}</h2>
             </Link>
-            <p className={styles.p_description}>{exerpt}</p>
-            <br />
-            {date}
+            <p className={styles.p_description}>{excerpt}</p>
           </li>
         ))}
       </ul>

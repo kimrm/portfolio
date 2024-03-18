@@ -9,7 +9,6 @@ export default function Hero() {
           <h1 className={styles.heading_1}>
             Creating amazing digital experiences
           </h1>
-          <h2 className={styles.heading_2}>Developer | Designer | Creator</h2>
         </div>
       </div>
       <div className={styles.description}>
