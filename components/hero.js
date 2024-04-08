@@ -7,7 +7,7 @@ export default function Hero() {
       <div className={styles.hero_heading}>
         <div>
           <h1 className={styles.heading_1}>
-            Creating amazing digital experiences
+            Developer looking for cool projects
           </h1>
         </div>
       </div>

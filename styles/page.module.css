@@ -222,7 +222,7 @@
   font-weight: 900;
   margin-block: 1rem;
   text-transform: uppercase;
-  background: linear-gradient(to right, #100b1c 20%, #016894 30%, #013045 70%);
+  background: #016894;
   background-position: 100% 50%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -238,7 +238,7 @@
   font-weight: 900;
   margin-block: 1rem;
   text-transform: uppercase;
-  background: linear-gradient(to right, #100b1c 20%, #016894 30%, #013045 70%);
+  background: linear-gradient(to right, #4b3285 20%, #016894 30%, #056895 70%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -394,19 +394,13 @@
   text-transform: uppercase;
   color: #bebebe;
   background-color: var(--icon-background);
-  background: linear-gradient(
-    90deg,
-    #2f2347 0%,
-    rgba(0, 0, 0, 1) 100%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: linear-gradient(90deg, #2f2347 100%, rgba(0, 0, 0, 1) 100%);
   font-size: 0.8rem;
   letter-spacing: 2px;
   font-weight: 800;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 1rem 1.5rem;
-  border: 1px solid rgba(var(--card-border-rgb), 0.1);
 }
 
 .contact_me_button:hover {
@@ -423,7 +417,7 @@
   letter-spacing: 2px;
   font-weight: 800;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 1rem 1.5rem;
   border: 1px solid rgba(var(--card-border-rgb), 0.1);
 }
@@ -431,7 +425,7 @@
 .about_me_button:hover {
   opacity: 1;
   transition: all 0.2s ease-in-out;
-  background-color: #2f2347;
+  border: 1px solid rgba(var(--card-border-rgb), 0.9);
 }
 
 @keyframes button_hover_animation {

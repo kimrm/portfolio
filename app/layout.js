@@ -25,7 +25,7 @@ const merriweather = Merriweather_Sans({
 });
 
 export const metadata = {
-  title: "kimrune.dev",
+  title: "kimrune.dev - Developer from Norway",
   description: "Developer from Norway creating engaging web experiences.",
 };
 
