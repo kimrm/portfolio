@@ -5,9 +5,18 @@ import Link from "next/link";
 export default function ProjectsPreview() {
   const projects = [
     {
+      title: "Next.js Airbnb-style booking app",
+      description:
+        "As a Project Exam I'm building a venue-booking app with Next.js and Tailwind CSS. The app is a work in progress and will be deployed soon. ",
+      image: "/holidation.png",
+      link: "",
+      github: "https://github.com/kimrm/venue-booking-app",
+      isShowcase: true,
+    },
+    {
       title: "Info-screen for conference and meeting rooms.",
       description:
-        "I'm currently working on a project for a client where I'm building a web app for displaying information on screens in conference and meeting rooms. The app is built with Remix and Typescript and is integrated with Google Calendar. More information will be available soon.",
+        "I'm currently working on a project for a client where I'm building a web app for displaying information on screens in conference and meeting rooms. The app is currently built with PHP/Laravel and vanilla JavaScript, and is now being rebuilt with Next.js. More information will be available soon.",
       image: "/rombooking.png",
       link: "",
       github: "",
